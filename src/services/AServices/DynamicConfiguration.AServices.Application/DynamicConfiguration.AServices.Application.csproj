@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DynamicConfiguration.AServices.Domain\DynamicConfiguration.AServices.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
