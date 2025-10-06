@@ -11,7 +11,7 @@ var app = builder.Build();
 
 // ConfigurationReader singleton olarak ekle
 var reader = new ConfigurationReader(
-    applicationName: "SERVICE-A",
+    applicationName: "SERVICE-B",
     connectionString: "Server=UMUT;Database=DynamicConfigurationDB;integrated security=true;TrustServerCertificate=True",
     rabbitMqHost: "localhost",
     refreshTimerIntervalInMs: 10000 // 10 saniye
