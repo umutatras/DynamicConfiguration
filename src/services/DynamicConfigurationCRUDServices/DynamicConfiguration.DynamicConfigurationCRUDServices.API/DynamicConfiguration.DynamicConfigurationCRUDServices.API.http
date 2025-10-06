@@ -1,0 +1,14 @@
+@DynamicConfiguration.DynamicConfigurationCRUDServices.API_HostAddress = http://localhost:5048
+
+POST {{DynamicConfiguration.DynamicConfigurationCRUDServices.API_HostAddress}}/configs/
+Content-Type: application/json
+Accept: application/json
+{
+  "Id": "6657c883-2e9b-43e4-a421-45f9ef25b415",
+  "Name": "4111111111111111",
+  "Type": "string",
+  "Value": "umut",
+  "IsActive": true,
+  "ApplicationName": "SERVICE-A"
+}
+###
