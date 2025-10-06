@@ -1,0 +1,6 @@
+@DynamicConfiguration.BServices.API_HostAddress = http://localhost:5239
+
+GET {{DynamicConfiguration.BServices.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
