@@ -1,6 +1,0 @@
-@DynamicConfiguration.AServices.API_HostAddress = http://localhost:5271
-
-GET {{DynamicConfiguration.BServices.API_HostAddress}}/config/4111111111111111
-Accept: application/json
-
-###

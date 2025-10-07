@@ -13,7 +13,7 @@ public class AppDbContext : DbContext
     {
         modelBuilder.Entity<ConfigurationRecord>(e =>
         {
-            e.HasKey(x => x.Id);        
+            e.HasKey(x => x.Id);
             e.Property(x => x.Name).HasMaxLength(200).IsRequired();
             e.Property(x => x.Type).HasMaxLength(50).IsRequired();
             e.Property(x => x.Value).IsRequired();

@@ -1,0 +1,29 @@
+﻿services:
+ sqlserver.db.invoice:
+    restart: always
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver.db.invoice
+    user: root
+    environment:
+      SA_PASSWORD: ${SA_PASSWORD}
+      ACCEPT_EULA: "Y"
+    ports:
+      - "14330:1433"
+    volumes:
+      - sqlserver.db.invoice.volume:/var/opt/mssql
+ rabbitmq:
+    image: rabbitmq:3-management
+    container_name: dynamic-config-rabbit
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    ports:
+      - "5672:5672"   # AMQP portu (uygulaman bağlanır)
+      - "15672:15672" # Web arayüzü (management UI) 
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq  # ✅ RabbitMQ verilerini kalıcı tutar
+      - rabbitmq_logs:/var/log/rabbitmq  # ✅ Logları ayrı volume’de saklar
+volumes: 
+  sqlserver.db.invoice.volume:
+  rabbitmq_data:
+  rabbitmq_logs:

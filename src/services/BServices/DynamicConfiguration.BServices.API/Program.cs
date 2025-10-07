@@ -1,7 +1,5 @@
 using DynamicConfiguration.Shared.ConfigReader;
-using DynamicConfiguration.Shared.ConfigReader.Data;
 using DynamicConfiguration.Shared.Extensions;
-using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCommonServiceExt(builder.Configuration);

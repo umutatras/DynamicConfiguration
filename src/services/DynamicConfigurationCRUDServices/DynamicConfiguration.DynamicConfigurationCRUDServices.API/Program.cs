@@ -2,10 +2,10 @@ using DynamicConfiguration.Shared.ConfigReader.Data;
 using DynamicConfiguration.Shared.ConfigReader.Events;
 using DynamicConfiguration.Shared.ConfigReader.Models;
 using DynamicConfiguration.Shared.Extensions;
-using System.Text.Json;
-using System.Text;
-using RabbitMQ.Client;
 using Microsoft.EntityFrameworkCore;
+using RabbitMQ.Client;
+using System.Text;
+using System.Text.Json;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCommonServiceExt(builder.Configuration);
 
